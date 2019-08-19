@@ -1,11 +1,9 @@
 version: 2.1
-# 環境設定
-excutors:
+executors:
   default:
     working_directory: ~/workspace
     docker:
       - image: node:12
-# ジョブで実行する処理を定義する
 commands:
   restore_npm:
     steps:
@@ -21,7 +19,7 @@ commands:
           - ~/workspace/node_modules
 jobs:
   setup:
-    executor:
+    executors:
       name: default
     steps:
       - checkout
@@ -29,7 +27,7 @@ jobs:
         name: installdependencies
         command: yarn
   build:
-    executor:
+    executors:
       name: default
     setps:
       - checkout
@@ -39,7 +37,7 @@ jobs:
         command: yarn build
       - save_npm
   test:
-    executor:
+    executors:
       name: default
     steps:
       - checkout
