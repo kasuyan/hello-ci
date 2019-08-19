@@ -31,7 +31,7 @@ jobs:
   build:
     executor:
       name: default
-    setps:
+    steps:
       - checkout
       - restore_npm
       - run:
