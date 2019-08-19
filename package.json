@@ -1,0 +1,29 @@
+{
+  "name": "hello-ci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kasuyan/hello-ci.git",
+  "author": "kasuyan <kasuya725@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.9.0",
+    "create-react-app": "^3.1.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.9.0",
+    "parcel": "^1.12.3",
+    "react-test-renderer": "^16.9.0",
+    "yarn": "^1.17.3"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
